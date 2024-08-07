@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="CSS/q3.css">
+
+
+    <header id="topPage">
+        <h1>Sign Up Form</h1>
+        <img id="logoSunny" src="images/q3.jfif" alt="The logo for Sunny Side Bowling Club">
+    </header>
+<br>
+</head>
+
+
+<body>
+    <form id="formId">
+		<div class="form-control"  id="names"></div>
+		<label>First Name:&nbsp;</label>
+		<input id="firstName"  type="text" name="firstName" placeholder="First Name"> 
+        <br><br>
+
+		<label>Last Name:&nbsp;</label>
+		<input id="lastName" type="text" name="lastName" placeholder="Last Name">  <br><br>
+    </div>
+
+    <div id="addressLabel">
+        <label>Address:&nbsp;</label>
+		<input id="address"  type="text" name="addy" placeholder="Address"><br><br>
+</div>
+
+<div id="genders">
+        <label>Gender:&nbsp;</label>
+		
+		<input id="male" type="radio" name="GenderM" value="male">
+		<label for="male">Male</label>
+
+		<input id="female" type="radio" name="GenderF" value="female">
+		<label for="female">Female</label> <br><br>
+</div>
+
+<div id="emailAddy">
+        <label>Email Id:&nbsp;</label>
+		<input id="email"  type="text" name="emailAddress" placeholder="example@gmail.com"><br><br>
+</div>
+<div id="mobileNumber">
+        <label>Mobile:&nbsp;</label>
+		<input id="phoneNumber"  type="text" name="phone" placeholder="e.g 083 123 1234"   ><br><br>
+    </div>
+
+        <div id="locationDiv">
+<label>Location:&nbsp;</label>
+	<select class= "required" id="selectLocation" name="selectLocation"> 
+        <option value="" disabled selected>Please Select a Location</option>
+		<option value="boardwalk">Boardwalk</option>
+		<option value="brooklyn">Brooklyn</option>
+		<option value="lynnwood">Lynnwood</option>
+        <option value="sunnyside">Sunnyside</option>
+		<option value="other">Other</option>
+	</select>
+    </div>
+    <br><br>
+    <div id="buttons">
+    <button type = "submit" onclick="" id="btnSign" name="signUp">Sign-up</button>&nbsp;&nbsp;
+    <button type = "reset" onclick="" id="btnReset" name="re">Reset</button>
+</div>
+
+    </form>
+<script>
+const myForm = document.getElementById("formId");
+const first_Name = document.getElementById("firstName");
+const last_Name = document.getElementById("lastName");
+const theAddress = document.getElementById("address");
+const emailId = document.getElementById("email");
+const mobile = document.getElementById("phoneNumber");
+const radios = document.getElementById("male");
+const radiosTwo = document.getElementById("female")
+const loc = document.getElementById("selectLocation");
+
+myForm.addEventListener("submit", (e) => {
+e.preventDefault();
+
+checkInputs();
+
+}) ;
+
+function checkInputs() {
+// retrieves the values from the selected inputs
+const first_NameValue = first_Name.value.trim();
+const last_NameValue = last_Name.value.trim();
+const theAddressValue = theAddress.value;
+const emailIdValue = emailId.value.trim();
+const mobileValue = mobile.value.trim();
+
+try {
+    
+} catch (error) {
+    
+}
+if(first_NameValue === "") {
+    
+alert("First Name cannot be blank.")
+}  else if (!isFirstName(first_NameValue)) {
+alert("Please enter a valid First Name.")
+} else {
+
+
+}
+
+if(last_NameValue === "") {
+    
+    alert("Last Name cannot be blank.")
+    } else if (!isLastName(last_NameValue)) {
+    alert("Please enter a valid Last Name.")
+    } else {
+    
+    
+    }
+
+    if(theAddressValue === "") {
+    
+    alert("Your Address cannot be blank.")
+    } else if (!isAddress(theAddressValue)) {
+    alert("Please enter a valid address.")
+    } else {
+    
+    
+    } 
+
+    if (document.getElementById("male").checked || document.getElementById("female").checked) {
+;
+
+    } else if (document.getElementById("male").checked == false || document.getElementById("female").checked == false) {
+alert("Please Select a Gender.")
+} 
+
+    if(emailIdValue=== "") {
+    
+    alert("Email cannot be blank.")
+    } else if (!isEmail(emailIdValue)) {
+    alert("Please enter a valid Email Address.")
+    } else {
+    
+    
+    }
+
+    if(mobileValue=== "") {
+    
+    alert("Phone number cannot be blank.")
+    } else if (!isMobile(mobileValue)) {
+    alert("Please enter a valid phone number.")
+    } else {
+    
+    
+    } if(document.getElementById("selectLocation").value== "") {
+        alert("Please select your location.")
+    } else {
+
+
+    }
+
+    
+}
+
+
+//Using regular expressions to validate inputs
+try
+ { function isFirstName(first_Name){
+return /^[a-z , .'-]+$/i.test(first_Name);
+
+}
+    
+} catch (error) {  
+    console.log(error.message);
+    
+}
+try 
+{ function isLastName(last_Name) {
+    return /^[a-z , .'-]+$/i.test(last_Name);
+
+ }
+    
+} catch (error) {
+    console.log(error.message)
+}
+ 
+try { 
+    function isAddress (theAddress) {
+return /\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\./i.test(theAddress);
+
+}
+} catch (error) {
+    console.log(error.message)
+    
+}
+
+try {
+    
+function isEmail (emailId) {
+return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i.test(emailId);
+
+}
+    
+} catch (error) {
+    console.log(error.message)
+}
+
+try {
+    function isMobile  (mobile) {
+    return /[0](\d{9})|([0](\d{2})( |-)((\d{3}))( |-)(\d{4}))|[0](\d{2})( |-)(\d{7})/i.test(mobile);
+}
+} catch (error) {
+    console.log(error.message)
+    
+}
+
+try {
+    function isLocation (loc) {
+return /^(!?--\s*[Ss]elect\s*--)$/i.test(loc);
+
+}
+    
+} catch (error) {
+    console.log(error.message)
+}
+
+function cookieFunction(RegCookie, value, daysLeft)
+const date = new date();
+date.setTime(date.getTime() + (daysLeft * 1209600)) // 14 x 86400= 1209600, 1 day = 24 hours = 24*60*60
+let expires = "expires" + date.toUTCString();
+document.cookie = ` ${RegCookie}=${value}; ${expires}; path=/`
+ 
+ 
+const fname = getElementById("firstName").value
+const mail = getElementById("email").value
+const digits = getElementById("phoneNumber").value
+
+document.getElementById("formId").addEventListener("submit", cookieFunction());
+ 
+</script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>

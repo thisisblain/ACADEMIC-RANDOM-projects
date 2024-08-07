@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Last Updated</title>
+
+
+    </head>
+<body>
+    <fieldset>
+        <legend>Update Date</legend>
+<form onsubmit="dateUpdate()" id="myForm">
+    <div class="updateDate">
+        <label> When was this website updated?  :</label>
+        <input type="text" id="dateInput" placeholder="YYYY-MM-DD" >
+
+    </div>
+<button type = "submit" onclick="dateUpdate()" id="btnUpdate" name="updateDetails">Send Update Details</button>
+</fieldset>
+</form>
+
+<script>
+    const dateInput = document.querySelector("#dateInput");
+    const myForm = document.querySelector("#myForm");
+
+    myForm.addEventListener("submit", dateUpdate);
+
+
+
+
+
+    function dateUpdate(e) {
+e.preventDefault();
+if(dateInput.value === "") {
+    alert("Please enter the date");
+} else  {
+           
+        var valueReturned= document.getElementById("dateInput").value;
+        //    valueReturned = new Date().toISOString().split("T")[0];
+           //document.getElementById("dateInput").value 
+// valueReturned = result= new Date().toISOString().split("T")[0];
+    
+    alert("This page was last updated on: " + valueReturned)
+        
+    } 
+    }
+    </script>
+</body>
+
+
+
+
+
+
+</html>

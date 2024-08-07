@@ -1,0 +1,55 @@
+
+
+html{ font-family: 'Raleway', sans-serif;
+    text-align: center;
+
+}
+
+
+  #firstName { width: 30%;
+}
+#lastName { width: 30%;
+}
+
+#address { width: 35%;
+}
+#addressLabel { position: relative;
+    left: 36px;
+
+}
+#email{ width: 30%;
+
+}
+#phoneNumber{ width: 15%;
+
+}
+
+#locationDiv { position: relative;
+left: -134px;
+
+
+}
+#genders{ position: relative;
+right: 145px;
+}
+#emailAddy{position: relative ;
+    left: 13px;
+
+} 
+#addressLabel{ position: relative;
+    left:50px ; 
+
+}
+#mobileNumber{position: relative;
+right: 95px;
+}
+#locationDiv{ position: relative;
+    right: 177px;
+
+}
+button{ position: relative;
+right: 50px;
+height: 50px;
+width: 80px;
+}
+

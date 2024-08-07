@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+<title> Car Collection</title>
+<style>
+table, td {
+text-align : center ;
+border-spacing: 0;
+border collapse: collapse ;
+};
+</style>
+
+</head>
+
+<body>
+<table id= "carTable" border= "1px solid black"> 
+<tr> <th colspan= "2">Cars in my Garage</th>
+</tr>
+
+
+<script language = "javascript" type= "text/javascript" >
+<!-- var table= document.getElementById("carTable") ; -->
+var myArray = new Array();
+<!-- var row = table.insertRow(0) ; --> alternatively, instead of the colspan attribute, th could have been used.
+<!-- var cellOne = row.insertCell(0); -->
+<!-- var cellTwo = row.insertCell(1) ; -->
+<!-- cellOne.innerHTML = "Cars in" ; -->
+<!-- cellTwo.innerHTML = "my Garage" ; -->
+
+
+myArray[0] = "BMW M4" ;
+myArray[1] = "Nissan Versa" ;
+myArray[2] = "Honda Civic" ;
+myArray[3] = "Hyundai Elantra Hybrid" ;
+myArray[4] = "Nissan Magnite" ;
+myArray[5] = "Hyundai Alcazar" ;
+
+myArray.pop() ;
+myArray.unshift("Mercedes Benz S-Class") ;
+ ; 
+ 
+//Using the For Loop
+for (var i=0; i < myArray.length; i++) {
+document.write("<tr><td>MyArray[" + i + "]"  + "</td>") ;
+document.write("<td>" + myArray[i] + "</td></tr>") ;
+}
+
+
+
+</script>
+
+</table>
+
+
+</body>
+
+</html>

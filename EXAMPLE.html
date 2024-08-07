@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>Car Collection</title>
+</head>
+<body> 
+    <div id="result"> </div>
+  <!--   <table border="1"> -->
+<<!-- tr>
+        <th>Cars in my garage</th>
+        </tr>
+
+        <tbody id="carCollection"> 
+
+        </tbody>
+    </table> -->
+
+    <script type="text/javascript">
+        // declaring some variables
+
+ var outputHTML = "" ;
+var myArray = ["BMW M4", "Nissan Versa", "Honda Civic", "Hyundai Elantra Hybrid", "Nissan Magnite", "Hyundai Alcazar"] ;
+
+    // looping over arrays
+    for(var i = 0; i < myArray.length; i++) {
+        outputHTML += "<tr>" ;
+        outputHTML  = "<td>"+ myArray[i] + "</td>";
+        outputHTML + = "</tr>";
+
+
+}
+outputHTML += "</table>";
+
+
+    </script>
+
+</body>
+
+</html>
