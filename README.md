@@ -1,5 +1,133 @@
-# ACADEMIC-RANDOM-projects
+## My Projects (LOOK HERE, RECRUITER!)
 A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. 
+
+# Appointment Booking Form
+
+This project is a simple web form for booking appointments. It collects user details, allows them to select a date and time for their appointment, and provides a space for additional messages.
+
+## Features
+
+- Input fields for full name, email, cellphone number, and date selection.
+- Date and time pickers for setting the appointment.
+- A message box for additional information.
+- A button to submit the form.
+
+## HTML Structure
+
+- **`<head>`**: Contains the page title, CSS stylesheet link, and Google Fonts link.
+- **`<body>`**: 
+  - An image of doctors.
+  - A form with fields for user information and appointment details.
+
+    ## CSS Styling
+
+The form and image are styled using the following CSS:
+
+```css
+.Appointment1 {
+    font-family: 'Raleway', sans-serif;
+    margin-left: 50px;
+}
+
+.form-details h1 {
+    position: relative;
+    right: -145px;
+}
+
+.form-details hr {
+    border: 4px solid;
+    border-radius: 5px;
+    color: #2dcc70;
+    width: 4%;
+    position: relative;
+    right: 40px;
+    top: -8px;
+}
+
+.form-details {
+    position: relative;
+    top: 35px;
+}
+
+.Doctor {
+    float: left;
+    width: 750px;
+    height: 670px;
+}
+
+.my-forms {
+    position: relative;
+    left: 50px;
+}
+
+.my-forms input[type="text"] {
+    width: 40%;
+    font-family: 'Raleway', sans-serif;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+.date-time {
+    position: relative;
+    left: 165px;
+    top: 13px;
+    font-family: 'Raleway', sans-serif;
+}
+
+#appointment-date {
+    position: relative;
+    left: 30px;
+}
+
+#msgbox {
+    width: 40%;
+    height: 200px;
+    margin: 8px 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.my-forms button {
+    width: 40%;
+    background-color: #2dcc70;
+    box-sizing: border-box;
+    margin: 8px 0;
+    border: 1px solid;
+    display: inline-block;
+    padding: 10px 5px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+```
+## How to Use
+
+1. Clone or download the repository.
+2. Open the `index.html` file in your web browser.
+3. Ensure that the CSS/Appointmentstyle.css file is in the correct location.
+4. Fill in the form fields and click "Send" to submit the information.
+
+## Notes
+
+- Ensure that the `CSS/Appointmentstyle.css` file exists and contains the required styles.
+- The CSS file styles the form to enhance its appearance and ensure consistent user experience.
+- Ensure all referenced files (CSS and images) are correctly linked and available in your project.
+- The form currently does not perform any actions upon submission. You may need to implement JavaScript or backend logic to handle form submissions.
+
+## Screenshot
+
+
+![Appointment Booking Form](https://github.com/user-attachments/assets/1ae251ab-2163-48c4-b972-39eeda3b051a)
+
+
 
 # question1: Car Collection
 
@@ -29,6 +157,7 @@ The JavaScript code:
 3. The table will display the list of cars in the garage.
 
 ## Example
+![Output](https://github.com/user-attachments/assets/337378c0-a776-4c91-a291-7a3dec711d14)
 
 ## Code
 
@@ -176,6 +305,9 @@ This project is a signup form implemented in HTML and JavaScript. The form colle
 2. Open the `index.html` file in your web browser.
 3. Fill in the form fields and click "Sign-up" to submit.
 4. The form will alert you if there are validation issues or missing information.
+   
+## Example
+![A form](https://github.com/user-attachments/assets/000e1bcd-9127-4845-accc-59a60b5c95b2)
 
 ## Code
 
