@@ -79,4 +79,73 @@ The JavaScript code:
 </body>
 
 </html>
+```
+# Question2 :Last Updated Date
+
+This project is a simple HTML and JavaScript application that allows users to input and submit a date. The date is then used to display an alert indicating when the page was last updated.
+
+## Features
+
+- Provides a form for users to input a date.
+- Displays an alert with the entered date when the form is submitted.
+- Includes basic validation to ensure the date input field is not empty.
+
+## Code Overview
+
+The HTML structure includes:
+- A `<head>` section with a title.
+- A `<body>` section containing a form with a text input field for the date and a submit button.
+
+The JavaScript code:
+- Selects the date input field and form.
+- Adds an event listener to the form to handle the `submit` event.
+- Defines a function `dateUpdate` that displays an alert with the entered date or prompts the user to enter a date if the field is empty.
+
+## How to Use
+
+1. Clone or download the repository.
+2. Open the `index.html` file in your web browser.
+3. Enter a date in the format `YYYY-MM-DD` in the input field.
+4. Click the "Send Update Details" button.
+5. An alert will display with the entered date.
+
+## Code
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Last Updated</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Update Date</legend>
+        <form onsubmit="dateUpdate()" id="myForm">
+            <div class="updateDate">
+                <label> When was this website updated? :</label>
+                <input type="text" id="dateInput" placeholder="YYYY-MM-DD" >
+            </div>
+            <button type="submit" onclick="dateUpdate()" id="btnUpdate" name="updateDetails">Send Update Details</button>
+        </form>
+    </fieldset>
+
+    <script>
+        const dateInput = document.querySelector("#dateInput");
+        const myForm = document.querySelector("#myForm");
+
+        myForm.addEventListener("submit", dateUpdate);
+
+        function dateUpdate(e) {
+            e.preventDefault();
+            if (dateInput.value === "") {
+                alert("Please enter the date");
+            } else {
+                var valueReturned = document.getElementById("dateInput").value;
+                alert("This page was last updated on: " + valueReturned);
+            }
+        }
+    </script>
+</body>
+</html>
+```
 
