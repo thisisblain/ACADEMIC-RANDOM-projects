@@ -1,5 +1,5 @@
 ## My Projects (LOOK HERE, RECRUITER!)
-A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. 
+A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
 
 # Age Calculator
 
