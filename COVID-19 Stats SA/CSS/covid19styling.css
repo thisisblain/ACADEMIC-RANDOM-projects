@@ -1,0 +1,20 @@
+html{font-family: 'Raleway', sans-serif;
+	margin-left: 60px;
+	margin-top: 60px;
+	color: #504174;}
+
+.content-table{width: 90%;
+	border: 1px solid #dddddd;
+	height: 400px;
+	position: relative;}
+
+.content-table thead tr{ background-color: #4cb050;
+	color: #ffffff;
+	text-align: left;}
+.content-table tbody tr{ border-bottom: 1px solid #dddddd;}
+.content-table tbody tr:nth-of-type(odd) {background-color: #f3f3f3;}
+
+footer {position: relative;
+	top: 15px;
+
+	font-style: italic;}
