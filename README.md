@@ -1,6 +1,127 @@
 ## My Projects (LOOK HERE, RECRUITER!)
 A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. 
 
+# Age Calculator
+
+This project is a simple age calculator form built using HTML, PHP, and CSS. Users can input their birth date, and upon submission, the form calculates and displays their age in years, months, and days.
+
+## HTML & CSS Structure
+
+The `index.html` file contains the structure of the age calculator form:
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        #btnSubmit {
+            width: 150px;
+            background-color: #0179fc;
+            color: white;
+            margin-top: 20px;
+        }
+        .container {
+            display: flex;
+        }
+        .dobBoxes {
+            margin-right: 20px;
+        }
+        .monthsBox {
+            margin-right: 20px;
+        }
+        .output {
+            background-color: #f7f7f7;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Age Calculator</h1>
+
+    <div class="container">
+        <div class="dobBoxes">
+            <form action="Question2.2.php" method="post" class="form">
+                <select style="width:250px" name="day" class="form-day">
+                    <option value="" disabled selected hidden>Date</option>
+                    <?php
+                    for ($i = 1; $i <= 31; $i++) {
+                        echo "<option value='$i'>$i</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="monthsBox">
+                <select style="width:250px" name="month" class="form-control">
+                    <option value="" disabled selected hidden>Month</option>
+                    <?php
+                    for ($i = 1; $i <= 12; $i++) {
+                        echo "<option value='$i'>$i</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <div class="yearsBox">
+                <select style="width: 250px" name="year" class="form-control">
+                    <option value="" disabled selected hidden>Year</option>
+                    <?php $year = date('Y'); ?>
+                    <?php
+                    for ($i = 1900; $i <= $year; $i++) {
+                        echo "<option value='$i'>$i</option>";
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
+
+        <input id="btnSubmit" type="submit" name="submit" class="btnSub" value="Click to calculate age">
+    </form>
+
+    <div class="output">
+        <?php
+        if (isset($_POST['submit'])) {
+            $day = $_POST['day'];
+            $month = $_POST['month'];
+            $year = $_POST['year'];
+
+            $dob = $day . '-' . $month . '-' . $year;
+
+            $bday = new DateTime($dob);
+            $age = $bday->diff(new DateTime);
+
+            $today = date('Y-m-d');
+
+            echo '<br />';
+            echo '<b>Your Birth date: </b>';
+            echo $dob;
+            echo '<br>';
+            echo '<b>Your Age : </b> ';
+            echo $age->y;
+            echo ' Years, ';
+            echo $age->m;
+            echo ' Months, ';
+            echo $age->d;
+            echo ' Days';
+        }
+        ?>
+    </div>
+</body>
+
+</html>
+```
+## How to Use
+1. Clone or download the repository.
+2. Ensure that the PHP file (Question2.2.php) is in the correct location.
+3. Open the index.html file in your web browser to view the age calculator form.
+   
+## Notes
+1. The PHP file processes the form data and calculates the age based on the selected date of birth.
+2. Ensure all referenced files (PHP) are correctly linked and available in your project.
+   
 # Appointment Booking Form
 
 This project is a simple web form for booking appointments. It collects user details, allows them to select a date and time for their appointment, and provides a space for additional messages.
