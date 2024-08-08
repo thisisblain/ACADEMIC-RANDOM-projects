@@ -1,0 +1,55 @@
+ header{ font-family: 'Raleway', sans-serif;
+	color: purple;
+	border: 3px white solid;
+	text-align: left;
+	border-bottom: 2px red solid;
+	box-shadow: 5px 10px 8px #808080;}
+
+nav {text-align: right;
+	color: blue;
+	position: relative;
+	top: -35px;
+	left: -60px;}
+
+.wellnessctr { width: 360px;
+	height: 180px;}
+
+	html{ margin-left: 5%;}
+
+	body { font-family: 'Raleway', sans-serif;
+		color: purple;}
+
+		.topText h2{position: relative;
+			right: -40px;
+			position: relative;
+			top: -65px;}
+
+	.details h4{ text-align: right;
+		position: relative;
+		top: 10px;
+			right: 5px;}
+
+	.details .time{ position: relative;
+		right: 23px;}
+
+	.drKelly{position: relative;
+		top: -65px;
+		float: left;}
+
+	.Paragraph { position: relative;
+		right: -5px;}
+
+	
+.bottomText h2{ position: relative;
+	right: -73px;
+	top: -75px;}
+
+.Footer{clear: both;
+	position: relative;
+	top: -50px;
+	height: 40px; 
+	text-align: center;
+	background-color: #170348;
+	width: 100%;
+	padding: 10px;
+	color: white;}

@@ -1,0 +1,62 @@
+.Appointment1{font-family: 'Raleway', sans-serif;
+	margin-left: 50px;}
+
+.form-details h1{ position: relative;
+	right: -145px;}
+
+	.form-details hr { border: 4px solid;
+		border-radius: 5px;
+		color: #2dcc70;
+		width: 4%;
+		position: relative;
+		right: 40px;
+		top: -8px;}
+
+		.form-details { position: relative;
+			top: 35px;}
+
+.Doctor{ float: left;
+	width: 750px;
+	height: 670px;}
+
+.my-forms {position: relative;
+	left: 50px;}
+
+.my-forms input[type="text"] 
+{ width: 40%;
+	font-family: 'Raleway', sans-serif;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: #f0f0f0;}
+
+	.date-time{ position: relative;
+		left: 165px;
+		top: 13px;
+		font-family: 'Raleway', sans-serif;}
+
+#appointment-date{ position: relative;
+	left: 30px;}
+
+#msgbox { width: 40%;
+	height: 200px;
+	margin: 8px 0;
+	padding-left: 25px;
+	padding-top: 10px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	background-color: #f0f0f0;
+	font-family: 'Raleway', sans-serif;}
+
+.my-forms button{ width: 40%;
+	background-color: #2dcc70;
+	box-sizing: border-box;
+	margin: 8px 0;
+	border: 1px solid;
+	display: inline-block;
+	padding: 10px 5px;
+	color: white;
+	font-family: 'Raleway', sans-serif;}
