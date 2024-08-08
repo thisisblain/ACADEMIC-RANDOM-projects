@@ -1,7 +1,7 @@
 # ACADEMIC-RANDOM-projects
 A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. 
 
-# Question1: Car Collection
+# question1: Car Collection
 
 This project is a simple HTML and JavaScript application that displays a collection of cars in a table format. The table is dynamically generated using JavaScript, which manipulates an array of car names.
 
@@ -29,8 +29,6 @@ The JavaScript code:
 3. The table will display the list of cars in the garage.
 
 ## Example
-
-![Screenshot of the Car Collection Table](screenshot.png)
 
 ## Code
 
@@ -80,7 +78,7 @@ The JavaScript code:
 
 </html>
 ```
-# Question2 :Last Updated Date
+# question2 :Last Updated Date
 
 This project is a simple HTML and JavaScript application that allows users to input and submit a date. The date is then used to display an alert indicating when the page was last updated.
 
@@ -148,4 +146,151 @@ The JavaScript code:
 </body>
 </html>
 ```
+# question3: Sign Up Form
+
+This project is a signup form implemented in HTML and JavaScript. The form collects user details and performs validation to ensure the entered data is accurate. It includes fields for names, address, gender, email, mobile number, and location. The CSS can be found at the top of the repo files!
+
+## Features
+
+- Form fields for user input: first name, last name, address, gender, email, mobile number, and location.
+- Validation of input fields using regular expressions to ensure correct format.
+- Alerts for missing or invalid input.
+
+## Code Overview
+
+### HTML Structure
+
+- **`<head>`**: Includes a Google Font and an external CSS file for styling.
+- **`<header>`**: Contains the form title and a logo image.
+- **`<body>`**: Includes a form with input fields and buttons for user interaction.
+
+### JavaScript
+
+- **Event Listener**: Added to the form to handle the `submit` event.
+- **Validation**: Checks for empty fields and validates input formats using regular expressions.
+- **Cookies**: A function is defined to set cookies, but it is incomplete and not functional in the current state.
+
+## How to Use
+
+1. Clone or download the repository.
+2. Open the `index.html` file in your web browser.
+3. Fill in the form fields and click "Sign-up" to submit.
+4. The form will alert you if there are validation issues or missing information.
+
+## Code
+
+```html
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/q3.css">
+    <header id="topPage">
+        <h1>Sign Up Form</h1>
+        <img id="logoSunny" src="images/q3.jfif" alt="The logo for Sunny Side Bowling Club">
+    </header>
+    <br>
+</head>
+
+<body>
+    <form id="formId">
+        <div class="form-control" id="names"></div>
+        <label>First Name:&nbsp;</label>
+        <input id="firstName" type="text" name="firstName" placeholder="First Name">
+        <br><br>
+
+        <label>Last Name:&nbsp;</label>
+        <input id="lastName" type="text" name="lastName" placeholder="Last Name">
+        <br><br>
+        </div>
+
+        <div id="addressLabel">
+            <label>Address:&nbsp;</label>
+            <input id="address" type="text" name="addy" placeholder="Address">
+            <br><br>
+        </div>
+
+        <div id="genders">
+            <label>Gender:&nbsp;</label>
+            <input id="male" type="radio" name="GenderM" value="male">
+            <label for="male">Male</label>
+
+            <input id="female" type="radio" name="GenderF" value="female">
+            <label for="female">Female</label>
+            <br><br>
+        </div>
+
+        <div id="emailAddy">
+            <label>Email Id:&nbsp;</label>
+            <input id="email" type="text" name="emailAddress" placeholder="example@gmail.com">
+            <br><br>
+        </div>
+        <div id="mobileNumber">
+            <label>Mobile:&nbsp;</label>
+            <input id="phoneNumber" type="text" name="phone" placeholder="e.g 083 123 1234">
+            <br><br>
+        </div>
+
+        <div id="locationDiv">
+            <label>Location:&nbsp;</label>
+            <select class="required" id="selectLocation" name="selectLocation">
+                <option value="" disabled selected>Please Select a Location</option>
+                <option value="boardwalk">Boardwalk</option>
+                <option value="brooklyn">Brooklyn</option>
+                <option value="lynnwood">Lynnwood</option>
+                <option value="sunnyside">Sunnyside</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <br><br>
+        <div id="buttons">
+            <button type="submit" onclick="" id="btnSign" name="signUp">Sign-up</button>&nbsp;&nbsp;
+            <button type="reset" onclick="" id="btnReset" name="re">Reset</button>
+        </div>
+    </form>
+
+    <script>
+        const myForm = document.getElementById("formId");
+        const first_Name = document.getElementById("firstName");
+        const last_Name = document.getElementById("lastName");
+        const theAddress = document.getElementById("address");
+        const emailId = document.getElementById("email");
+        const mobile = document.getElementById("phoneNumber");
+        const radios = document.getElementById("male");
+        const radiosTwo = document.getElementById("female");
+        const loc = document.getElementById("selectLocation");
+
+        myForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            checkInputs();
+        });
+
+        function checkInputs() {
+            const first_NameValue = first_Name.value.trim();
+            const last_NameValue = last_Name.value.trim();
+            const theAddressValue = theAddress.value;
+            const emailIdValue = emailId.value.trim();
+            const mobileValue = mobile.value.trim();
+
+            if (first_NameValue === "") {
+                alert("First Name cannot be blank.");
+            } else if (!isFirstName(first_NameValue)) {
+                alert("Please enter a valid First Name.");
+            }
+
+            if (last_NameValue === "") {
+                alert("Last Name cannot be blank.");
+            } else if (!isLastName(last_NameValue)) {
+                alert("Please enter a valid Last Name.");
+            }
+
+            if (theAddressValue === "") {
+                alert("Your Address cannot be blank.");
+            } else if (!isAddress(theAddressValue)) {
+                alert("Please enter a valid address.");
+            }
+
+            if (!document.getElementById("male").checked && !document.getElementById("female").checked) {
+                alert("Pl
 
