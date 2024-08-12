@@ -544,6 +544,66 @@ This project is a signup form implemented in HTML and JavaScript. The form colle
                 alert("Please enter a valid address.");
             }
 
+
             if (!document.getElementById("male").checked && !document.getElementById("female").checked) {
-                alert("Pl
+                alert("Please Select a Gender.");
+            }
+
+            if (emailIdValue === "") {
+                alert("Email cannot be blank.");
+            } else if (!isEmail(emailIdValue)) {
+                alert("Please enter a valid Email Address.");
+            }
+
+            if (mobileValue === "") {
+                alert("Phone number cannot be blank.");
+            } else if (!isMobile(mobileValue)) {
+                alert("Please enter a valid phone number.");
+            }
+
+            if (document.getElementById("selectLocation").value === "") {
+                alert("Please select your location.");
+            }
+        }
+
+        function isFirstName(first_Name) {
+            return /^[a-z , .'-]+$/i.test(first_Name);
+        }
+
+        function isLastName(last_Name) {
+            return /^[a-z , .'-]+$/i.test(last_Name);
+        }
+
+        function isAddress(theAddress) {
+            return /\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\./i.test(theAddress);
+        }
+
+        function isEmail(emailId) {
+            return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/i.test(emailId);
+        }
+
+        function isMobile(mobile) {
+            return /[0](\d{9})|([0](\d{2})( |-)((\d{3}))( |-)(\d{4}))|[0](\d{2})( |-)(\d{7})/i.test(mobile);
+        }
+
+        function cookieFunction(RegCookie, value, daysLeft) {
+            const date = new Date();
+            date.setTime(date.getTime() + (daysLeft * 86400000)); // 1 day = 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
+            let expires = "expires=" + date.toUTCString();
+            document.cookie = `${RegCookie}=${value}; ${expires}; path=/`;
+        }
+
+        document.getElementById("formId").addEventListener("submit", () => {
+            cookieFunction("firstName", first_Name.value, 7);
+            cookieFunction("lastName", last_Name.value, 7);
+            cookieFunction("address", theAddress.value, 7);
+            cookieFunction("email", emailId.value, 7);
+            cookieFunction("mobile", mobile.value, 7);
+            cookieFunction("gender", radios.checked ? "male" : "female", 7);
+            cookieFunction("location", loc.value, 7);
+            alert("Form submitted successfully!");
+        });
+    </script>
+</body>
+</html>
 
