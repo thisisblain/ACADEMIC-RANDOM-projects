@@ -1,5 +1,74 @@
-## My Projects (LOOK HERE, RECRUITER!)
-A collection of some HTML, CSS, JavaScript, PHP and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
+## My Projects (LOOK HERE)
+A collection of some HTML, CSS, JavaScript, PHP, C# and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
+
+
+# Library Management System
+
+
+
+## Overview
+
+A simple Library Management System developed in C#. This system allows members to borrow and return books, librarians to add or remove books, and admins to generate various reports.
+
+
+## Features
+
+
+-
+ User Roles: Admin, Librarian, Member
+
+-
+ Borrow and Return Books
+
+-
+ Add and Remove Books
+
+-
+ Generate Reports:
+
+  -
+ Borrowed Books
+
+  -
+ Overdue Books
+
+  -
+ Most Popular Books
+
+-
+ Overdue Notifications
+
+
+## Technologies Used
+
+
+-
+ C#
+
+-
+ .NET Framework
+
+
+## Usage
+
+
+1.
+ Clone the repository.
+
+2.
+ Open the project in Visual Studio or your preferred C# IDE.
+
+3.
+ Build and run the application.
+
+
+## License
+
+[
+MIT
+](
+LICENSE
+)
 
 # Age Calculator
 
