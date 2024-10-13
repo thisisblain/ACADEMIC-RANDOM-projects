@@ -14,52 +14,39 @@ A simple Library Management System developed in C#. This system allows members t
 ## Features
 
 
--
- User Roles: Admin, Librarian, Member
+- User Roles: Admin, Librarian, Member
 
--
- Borrow and Return Books
+- Borrow and Return Books
 
--
- Add and Remove Books
+- Add and Remove Books
 
--
- Generate Reports:
+- Generate Reports:
 
-  -
- Borrowed Books
+- Borrowed Books
 
-  -
- Overdue Books
+- Overdue Books
 
-  -
- Most Popular Books
+- Most Popular Books
 
--
- Overdue Notifications
+- Overdue Notifications
 
 
 ## Technologies Used
 
 
--
- C#
+- C#
 
--
- .NET Framework
+  .NET Framework
 
 
 ## Usage
 
 
-1.
- Clone the repository.
+1.Clone the repository.
 
-2.
- Open the project in Visual Studio or your preferred C# IDE.
+2.Open the project in Visual Studio or your preferred C# IDE.
 
-3.
- Build and run the application.
+3.Build and run the application.
 
 
 ## License
