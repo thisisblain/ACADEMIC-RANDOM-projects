@@ -11,7 +11,7 @@ using System.IO;
 using System.Net;
 
 
-namespace PROGRAMMING_742_ASSIGNMENT_QUESTION_1_LMS
+namespace LMS_PROJECT
 {
     // Delegate for Overdue Notifications
     public delegate void OverdueNotificationHandler(Member member, Book book);
