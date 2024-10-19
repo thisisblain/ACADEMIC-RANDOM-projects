@@ -117,7 +117,158 @@ This project is licensed under the **MIT License**.
 
 ---
 
+# Movie List App with RecyclerView and Glide
 
+This is an Android Movie List app that displays a list of movies using **RecyclerView** and **Glide** for image loading. Each movie has its title, genre, release year, and poster image, which are dynamically loaded from a list of movie objects.
+
+## Features
+
+- **RecyclerView Implementation**: Displays a list of movies in a scrollable view.
+- **Movie Data**: Movie title, genre, release year, and poster image.
+- **Glide Library**: Loads poster images from URLs into the app efficiently.
+- **Responsive Layout**: The app adapts to different screen sizes with ConstraintLayout.
+
+## Project Structure
+
+### 1. **Main Components**:
+- **`Movies.java`**: A model class to represent a movie with attributes: title, genre, poster URL, and release year.
+  
+- **`MainActivity.java`**: The main activity where the movie list is populated, and RecyclerView is set up with a LinearLayoutManager.
+
+- **`MovieAdapter.java`**: A custom adapter that binds movie data to the RecyclerView.
+
+### 2. **XML Layouts**:
+- **`activity_main.xml`**: Layout for `MainActivity`, which contains the RecyclerView.
+  
+- **`movie_items.xml`**: Layout for each movie item, displaying movie information and a poster image.
+
+### 3. **Important Files**:
+- The file titled `main` contains the **Movie List App**, where the movie data is loaded, and the user can scroll through the list of movies.
+
+## How It Works
+
+1. **Movie List**:
+   - The app initializes a list of `Movies` objects with details such as the title, genre, poster image URL, and release year.
+   - These movie objects are then passed to a custom `MovieAdapter`, which is responsible for binding the data to the `RecyclerView`.
+
+2. **Displaying Movies**:
+   - The `RecyclerView` is populated with a vertical list of movie items. Each item shows the movie poster, title, genre, and release year.
+   - The poster images are fetched from external URLs using the **Glide** library, ensuring efficient loading and caching.
+
+### Movie Class Example (`Movies.java`):
+
+```java
+public class Movies {
+    private String movieTitle, movieGenre, posterUrl;
+    private int movieReleaseYear;
+
+    public Movies(String movieTitle, String movieGenre, String posterUrl, int movieReleaseYear) {
+        this.movieTitle = movieTitle;
+        this.movieGenre = movieGenre;
+        this.posterUrl = posterUrl;
+        this.movieReleaseYear = movieReleaseYear;
+    }
+
+    public String getMovieTitle() { return movieTitle; }
+    public String getMovieGenre() { return movieGenre; }
+    public String getPosterUrl() { return posterUrl; }
+    public int getMovieReleaseYear() { return movieReleaseYear; }
+}
+```
+
+### MovieAdapter Example (`MovieAdapter.java`):
+
+```java
+@Override
+public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
+    Movies movie = moviesList.get(position);
+    holder.movieTitle.setText(movie.getMovieTitle());
+    holder.movieGenre.setText(movie.getMovieGenre());
+    holder.movieReleaseYear.setText(String.valueOf(movie.getMovieReleaseYear()));
+
+    // Use Glide to load movie poster from URL
+    Glide.with(context)
+         .load(movie.getPosterUrl())
+         .into(holder.moviePoster);
+}
+```
+
+### Example of RecyclerView Item Layout (`movie_items.xml`):
+
+```xml
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <ImageView
+        android:id="@+id/moviePoster"
+        android:layout_width="100dp"
+        android:layout_height="150dp" />
+    
+    <TextView
+        android:id="@+id/movieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/movieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/movieTitle" />
+
+    <TextView
+        android:id="@+id/movieReleaseYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/movieGenre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+## Setup Instructions
+
+1. **Clone the Repository**:
+   - Use the following command to clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/movie-list-app.git
+   ```
+
+2. **Dependencies**:
+   - The project uses the **Glide** library for image loading. Add this dependency in your `build.gradle` file:
+   ```gradle
+   implementation 'com.github.bumptech.glide:glide:4.12.0'
+   annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+   ```
+
+3. **Running the App**:
+   - Open the project in Android Studio.
+   - Sync the Gradle files to install the dependencies.
+   - Run the app on an emulator or a physical Android device.
+
+## Screenshots
+
+### Movie List
+
+![Movie List](images/movie_list.png)
+
+### Movie Details
+
+![Movie Details](images/movie_details.png)
+
+## Future Enhancements
+
+- **Search Feature**: Add a search bar to filter movies by title or genre.
+- **Details Page**: Implement a details page that provides more information about the selected movie.
+- **Favorites**: Allow users to mark movies as favorites and store the favorite list locally.
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
 
 # Library Management System
 
