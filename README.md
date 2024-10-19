@@ -1,5 +1,5 @@
 ## My Projects (LOOK HERE)
-A collection of some HTML, CSS, JavaScript, PHP, C# and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
+A collection of some HTML, CSS, JavaScript, PHP, C#, Java and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
 
 # User Authentication System with JSP and Servlets
 
