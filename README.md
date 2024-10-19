@@ -1,10 +1,6 @@
 ## My Projects (LOOK HERE)
 A collection of some HTML, CSS, JavaScript, PHP, C# and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
 
-Here’s your `README.md` formatted for GitHub, using GitHub markdown syntax:
-
----
-
 # User Authentication System with JSP and Servlets
 
 This project implements a simple user authentication system using **Java Servlets** and **JSP** (JavaServer Pages). It includes basic user functionalities such as registration, login, and a personalized welcome page with session management. The system interacts with a **MySQL database** to store and retrieve user credentials.
@@ -12,8 +8,11 @@ This project implements a simple user authentication system using **Java Servlet
 ## Features
 
 - **Login Page**: Users can log in by entering their username and password.
+  ![Login Page](images/login jsp image.png)
 - **Registration Page**: New users can register by providing necessary information.
+  ![Registration Page](images/register jsp image.png)
 - **Welcome Page**: Displays a personalized greeting along with the user’s last login time.
+  ![Welcome Page](images/welcome page java.png)
 - **Database Interaction**: User information is stored in a MySQL database.
 - **Session Management**: Tracks users’ sessions and controls page access.
 
