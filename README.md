@@ -1,6 +1,114 @@
 ## My Projects (LOOK HERE)
 A collection of some HTML, CSS, JavaScript, PHP, C# and other projects I have done over the course of my studies. Please note that not every single file in this repo is included down below.
 
+Here’s your `README.md` formatted for GitHub, using GitHub markdown syntax:
+
+---
+
+# User Authentication System with JSP and Servlets
+
+This project implements a simple user authentication system using **Java Servlets** and **JSP** (JavaServer Pages). It includes basic user functionalities such as registration, login, and a personalized welcome page with session management. The system interacts with a **MySQL database** to store and retrieve user credentials.
+
+## Features
+
+- **Login Page**: Users can log in by entering their username and password.
+- **Registration Page**: New users can register by providing necessary information.
+- **Welcome Page**: Displays a personalized greeting along with the user’s last login time.
+- **Database Interaction**: User information is stored in a MySQL database.
+- **Session Management**: Tracks users’ sessions and controls page access.
+
+## Technologies Used
+
+- Java Servlets
+- JSP (JavaServer Pages)
+- MySQL Database
+- HTML & CSS for UI
+- JDBC for Database Connectivity
+
+## Project Structure
+
+### JSP Pages:
+- `LoginQ3.jsp`: The login page where users enter their credentials.
+- `RegistrationQ3.jsp`: The registration page for creating new accounts.
+- `Welcome.jsp`: The welcome page shown after successful login.
+
+### Servlets:
+- **`LoginServlet.java`**: 
+  - Handles user login requests.
+  - Validates credentials against the database.
+  - Starts a session and redirects the user to the `Welcome.jsp` if the login is successful.
+  
+- **`RegistrationServlet.java`**: 
+  - Handles new user registration.
+  - Inserts user details into the database and provides feedback.
+
+## Setup Instructions
+
+### 1. Database Setup
+- Create a **MySQL database** named `users`.
+- Create a table `user_credentials`:
+    ```sql
+    CREATE TABLE user_credentials (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        password VARCHAR(50) NOT NULL,
+        name VARCHAR(50) NOT NULL,
+        first_time_login BOOLEAN DEFAULT TRUE,
+        last_login DATETIME
+    );
+    ```
+- Insert sample user data or register users through the registration page.
+
+### 2. Clone the Repository
+
+To clone this repository, use the following command:
+
+```bash
+git clone https://github.com/yourusername/authentication-system.git
+```
+
+### 3. Configure Database Connection
+- In the `LoginServlet.java` and `RegistrationServlet.java`, update the database URL, username, and password with your local MySQL setup:
+    ```java
+    con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users", "root", "your_password");
+    ```
+
+### 4. Deploy the Project
+- Use an IDE like **Eclipse** or **IntelliJ IDEA** to deploy this project on a Java web server (e.g., **Apache Tomcat**).
+- Access the application at `http://localhost:8080/your-project-name/`.
+
+## How It Works
+
+1. **Login Process**:
+   - Users log in with a valid username and password.
+   - If the credentials match an entry in the database, a session is created, and the user is redirected to the welcome page.
+   - If the credentials are invalid, an error message is shown.
+
+2. **Registration Process**:
+   - New users register by filling out the registration form.
+   - After a successful registration, they are prompted to log in.
+
+3. **Session Management**:
+   - User sessions store the username and personal information to provide a personalized experience.
+   - The system tracks if it’s the user’s first time logging in and displays their last login time.
+
+## Future Enhancements
+
+- **Password Encryption**: Add password hashing to improve security.
+- **Logout Feature**: Implement a logout function to end user sessions.
+- **Enhanced Validation**: Include email validation and stronger password requirements.
+
+## Author
+
+- **Blain Holland**
+
+## License
+
+This project is licensed under the **MIT License**.
+
+---
+
+
 
 # Library Management System
 
@@ -36,7 +144,7 @@ A simple Library Management System developed in C#. This system allows members t
 
 - C#
 
-  .NET Framework
+- .NET Framework
 
 
 ## Usage
