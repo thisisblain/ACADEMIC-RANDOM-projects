@@ -8,7 +8,6 @@ This project implements a simple user authentication system using **Java Servlet
 ## Features
 
 - **Login Page**: Users can log in by entering their username and password.
-  ![Login Page](images/login jsp image.png)
 - **Registration Page**: New users can register by providing necessary information.
   ![Registration Page](images/register jsp image.png)
 - **Welcome Page**: Displays a personalized greeting along with the user’s last login time.
@@ -90,6 +89,17 @@ git clone https://github.com/yourusername/authentication-system.git
 3. **Session Management**:
    - User sessions store the username and personal information to provide a personalized experience.
    - The system tracks if it’s the user’s first time logging in and displays their last login time.
+  
+Here are screenshots of the main pages:
+
+### Login Page
+![Login Page](images/login-jsp-image.png)
+
+### Registration Page
+![Registration Page](images/register-jsp-image.png)
+
+### Welcome Page
+![Welcome Page](images/welcome-page-java.png)
 
 ## Future Enhancements
 
