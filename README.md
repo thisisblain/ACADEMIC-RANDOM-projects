@@ -252,11 +252,9 @@ public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
 
 ### Movie List
 
-![Movie List](images/movie_list.png)
+![Movie List](images/movie-list.png)
+![Movie List](images/movie-list2.png)
 
-### Movie Details
-
-![Movie Details](images/movie_details.png)
 
 ## Future Enhancements
 
